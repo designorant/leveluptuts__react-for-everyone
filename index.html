@@ -7,6 +7,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js" charset="utf-8"></script>
   </head>
   <body>
+    <div id="area"></div>
+    <script type="text/babel">
 
+      var HelloWorld = React.createClass({
+
+        propTypes: {
+          name: React.PropTypes.string.isRequired
+        },
+
+        getDefaultProps: function() {
+          return {
+            name: 'Scott'
+          }
+        },
+
+        render: function() {
+          return (
+            <h1>Hello {this.props.name}</h1>
+          )
+        }
+
+      });
+
+      ReactDOM.render(
+        <HelloWorld />,
+        document.getElementById('area')
+      );
+
+    </script>
   </body>
 </html>
