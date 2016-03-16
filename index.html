@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <script src="build/react.js"></script>
-    <script src="build/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div id="area"></div>
-    <script type="text/babel">
+    <head>
+        <title></title>
+        <script src="build/react.js"></script>
+        <script src="build/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="area"></div>
+        <script type="text/babel">
 
-      var HelloWorld = React.createClass({
+            var HelloWorld = React.createClass({
 
-        propTypes: {
-          name: React.PropTypes.string,
-          isPerson: React.PropTypes.bool
-        },
+                propTypes: {
+                    name: React.PropTypes.string,
+                    isPerson: React.PropTypes.bool
+                },
 
-        getDefaultProps: function() {
-          return {
-            name: 'Scott'
-          }
-        },
+                getDefaultProps: function() {
+                    return {
+                        name: 'Scott'
+                    }
+                },
 
-        render: function() {
-          var greeting = "World"
-          if (this.props.isPerson) {
-            greeting = (<Person name={this.props.name} />)
-          }
-          return (
-            <h1>Hello {greeting}</h1>
-          )
-        }
+                render: function() {
+                    var greeting = "World"
+                    if (this.props.isPerson) {
+                        greeting = (<Person name={this.props.name} />)
+                    }
+                    return (
+                        <h1>Hello {greeting}</h1>
+                    )
+                }
 
-      });
+            });
 
-      var Person = React.createClass({
+            var Person = React.createClass({
 
-        propTypes: {
-          name: React.PropTypes.string.isRequired
-        },
+                propTypes: {
+                    name: React.PropTypes.string.isRequired
+                },
 
-        getDefaultProps: function() {
-          return {
-            name: 'Scott'
-          }
-        },
+                getDefaultProps: function() {
+                    return {
+                        name: 'Scott'
+                    }
+                },
 
-        render: function() {
-          return (
-            <span>{this.props.name}</span>
-          )
-        }
+                render: function() {
+                    return (
+                        <span>{this.props.name}</span>
+                    )
+                }
 
-      });
+            });
 
-      ReactDOM.render(
-        <HelloWorld name="Tim" isPerson={true} />,
-        document.getElementById('area')
-      );
+            ReactDOM.render(
+                <HelloWorld name="Tim" isPerson={true} />,
+                document.getElementById('area')
+            );
 
-    </script>
-  </body>
+        </script>
+    </body>
 </html>
