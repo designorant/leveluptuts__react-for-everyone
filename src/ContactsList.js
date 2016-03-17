@@ -4,7 +4,7 @@ class ContactsList extends React.Component {
     render() {
         return (
             <ul>
-                <li>Scott 555 555 5555</li>
+                <li>{this.props.contacts.name} {this.props.contacts.phone}</li>
             </ul>
         )
     }
