@@ -1,4 +1,5 @@
 import React from 'react';
+import {render} from 'react-dom';
 import ContactsList from './ContactsList.js';
 
 let contacts = [
@@ -35,4 +36,4 @@ class App extends React.Component {
     }
 }
 
-React.render(<App contacts={contacts} />, document.getElementById('app'));
+render(<App contacts={contacts} />, document.getElementById('app'));
